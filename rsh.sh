@@ -2,7 +2,7 @@
 export VERSION="1.0"
 
 # Global Vars
-export _ROELLSH_DIR="/workspace/hacking/rsh";
+export _ROELLSH_DIR="~/rsh/rsh.sh";
 export _PLUGINS_DIR="$_ROELLSH_DIR/plugins";
 
 # Source all Plugins
