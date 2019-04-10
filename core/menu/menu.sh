@@ -17,7 +17,7 @@ function printMenu()
         let "count=count+1"; 
     done;
 }
-echo "${PURPLE}"
+echo "${LIGHTRED}"
 printHeader;
 echo "${SET}"
 printLine;

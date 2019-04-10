@@ -2,8 +2,8 @@
 export VERSION="1.0"
 
 # Global Vars
-export _PLUGINS_DIR="./plugins";
-export _ROELLSH_DIR="/workspace/hacking/roellsh";
+export _ROELLSH_DIR="/workspace/hacking/rsh";
+export _PLUGINS_DIR="$_ROELLSH_DIR/plugins";
 
 # Source all Plugins
 for f in `ls $_PLUGINS_DIR`; do source $_PLUGINS_DIR/$f; done;
@@ -15,7 +15,7 @@ function rsh()
 {
     # Show menu when there is no first param
     if [ -z "$1" ]; then
-        sh ./core/menu/menu.sh;
+        sh $_ROELLSH_DIR/core/menu/menu.sh;
     fi
 
     if [ "$1" = "help" ]; then

@@ -13,7 +13,7 @@ function pull()
     do
         dir="$_WORKSPACE_DIR$repo"
         cd $dir;
-        echo "Pulling: ${BLUE}$(basename `pwd`)${SET}"
+        echo "Pulling: ${BLUE}$(basename `pwd`)${SET} | ${PURPLE}$(getCurrentBranch)${SET}"
         savePull;
     done;
 }
@@ -83,7 +83,7 @@ function getCurrentBranch()
 
 function sclear() 
 {
-    echo "clear";
+    echo "TODO";
 }
 
 
@@ -102,7 +102,7 @@ cat << "EOF"
     stash   is a git function to stash your changes with
             example: --stash yourStashName
     
-    clear   will delete all created stashes from roellsh
+    sclear   will delete all created stashes from roellsh
 
 EOF
 }
