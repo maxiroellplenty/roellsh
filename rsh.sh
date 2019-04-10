@@ -2,8 +2,8 @@
 export VERSION="1.0"
 
 # Global Vars
-export _ROELLSH_DIR="~/rsh";
-export _PLUGINS_DIR="$_ROELLSH_DIR/plugins";
+export _ROELLSH_DIR=~/rsh;
+export _PLUGINS_DIR=$_ROELLSH_DIR/plugins;
 
 # Source all Plugins
 for f in `ls $_PLUGINS_DIR`; do source $_PLUGINS_DIR/$f; done;
