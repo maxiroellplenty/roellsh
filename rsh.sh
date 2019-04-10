@@ -2,7 +2,7 @@
 export VERSION="1.0"
 
 # Global Vars
-export _ROELLSH_DIR="~/rsh/rsh.sh";
+export _ROELLSH_DIR="~/rsh";
 export _PLUGINS_DIR="$_ROELLSH_DIR/plugins";
 
 # Source all Plugins
