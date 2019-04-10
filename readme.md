@@ -1,5 +1,5 @@
 # roellsh 'rsh'
-> make your dev life easier with rsh
+> make your dev life easier with rsh 100% Shell
 
 ## Requirements
 bash shell (Linux or Mac OS X)
