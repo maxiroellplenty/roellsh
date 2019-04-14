@@ -8,7 +8,7 @@ The main plugin is the `rsgit` plugin to pull multiple git repositories at the s
 * edit the repos at `nano ~/rsh/plugins/rsgit` add new repos to the repositories array.
 
 ## Requirements
-bash shell (Linux or Mac OS X)
+bash shell (Mac OS X)
 
 ## Install
 install works for `zsh` and `bash`
