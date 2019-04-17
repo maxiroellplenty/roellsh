@@ -1,5 +1,5 @@
 # roellsh 'rsh'
-> make your dev life easier with rsh 100% Shell
+> make your dev life easier with rsh
 
 Roellsh is a bash script which carries some useful tools for your CLI,
 you can add your own plugins to add as many scripts as you want.
@@ -13,9 +13,30 @@ bash shell (Mac OS X)
 ## Install
 install works for `zsh` and `bash`
 
-``` bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/maxiroellplenty/roellsh/master/core/scripts/install.sh)"
+```
+git clone https://github.com/maxiroellplenty/roellsh.git
 ```
 
-## Demo
-![demo](demo.gif)
+go into the directory roellsh
+``` 
+cd roellsh
+```
+and execute the `install.sh` file
+
+``` 
+sh install.sh
+```
+Follow the install script and booom type: rsh and let the magic happen.
+
+### Linux
+On Linux give the install file execution rights with (mby sudo)
+```
+chmod +x install.sh
+```
+
+then run
+```
+./install.sh
+```
+
+[LICENSE](https://github.com/maxiroellplenty/roellsh/blob/master/LICENSE)
