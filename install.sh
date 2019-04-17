@@ -1,5 +1,6 @@
 # Colors
 LIGHTRED='\033[1;31m'
+RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 SET='\033[0m'
@@ -9,7 +10,7 @@ aliasPath="";
 installPath=~/rsh;
 rsh=$installPath/rsh.sh;
 
-function checkBashDirs() 
+function checkBashDirs
 {
     bash=~/.bashrc
     bash_profile=~/.bashrc_profile
@@ -23,28 +24,39 @@ function checkBashDirs()
     fi
 }
 
-function printHeader()
+function printHeader
 {
 cat << "EOF"
-         _                 
-        [ ]              
-       (   )
-        |>|              
-     __/===\__        
-    //| o=o |\\
-  <]  | o=o |  [>
-      \=====/
-     / / | \ \
-    <_________>         roellsh installer by Frank Wizard                                                               
+                          ,     \    /      ,
+                         / \    )\__/(     / \
+                        /   \  (_\  /_)   /   \
+     __________________/_____\__\@  @/___/_____\_________________
+     |                          |\../|                          |
+     |                           \VV/                           |
+     |                                                          |
+     |               welcome to roellsh installer               |
+     |                          -----                           |
+     |                     by Frank Wizard                      |
+     |                                                          |
+     |__________________________________________________________|
+                   |    /\ /      \\       \ /\    |
+                   |  /   V        ))       V   \  |
+                   |/     `       //        '     \|
+                   `              V                '
+                                                              
 EOF
+#img by Brian Young
+#This ASCII pic can be found at
+#https://asciiart.website/index.php?art=creatures/dragons
+
 }
 
-function setAlias() 
+function setAlias
 {
     grep -q -F "$rsh" $aliasPath || echo source $rsh >> $aliasPath
 }
 
-function installRsh() 
+function installRsh
 {
     mkdir -pv $installPath;
     #cd $installPath;
@@ -53,7 +65,7 @@ function installRsh()
     cp -r ./* $installPath; 
 }
 
-function areYouSure()
+function areYouSure
 {
     defaultText="${YELLOW}Are you sure you want to install roellsh enter: [y,n]${SET}";
     if [ -n "$1" ]; then
@@ -67,7 +79,7 @@ function areYouSure()
     esac 
 }
 
-echo "${LIGHTRED}"
+echo "${RED}"
 printHeader;
 echo "${SET}"
 areYouSure;
