@@ -90,4 +90,11 @@ echo "Set install path to: ${GREEN} $installPath ${SET}";
 installRsh;
 setAlias;
 echo "Thats it. Open new shell and type 'rsh' to start the script";
+echo ""
+areYouSure "do you want to remove the downloaded files at ${GREEN}$(pwd)${SET} enter: [y,n]";
+cd ..
+if [ -d "roellsh" ]; then
+    rm -rf "roellsh";
+fi
+
 

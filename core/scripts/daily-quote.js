@@ -1,18 +1,13 @@
-const https = require('https');
+const http = require('http');
 
-https.get('http://quotes.rest/quote/search.json?maxlength=100', (resp) => {
-  let data = '';
-
-  // A chunk of data has been recieved.
-  resp.on('data', (chunk) => {
-    data += chunk;
+http.get('http://quotes.rest/qod.json', res => {
+    let body = "";
+    res.on("data", data => {
+      body += data;
+    });
+    res.on("end", () => {
+      body = JSON.parse(body);
+      console.log(body.contents.quotes[0].quote);
+      console.log("~ " + body.contents.quotes[0].author);
+    });
   });
-
-  // The whole response has been received. Print out the result.
-  resp.on('end', () => {
-    console.log(data);
-  });
-
-}).on("error", (err) => {
-  console.log("Error: " + err.message);
-});

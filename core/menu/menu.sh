@@ -27,3 +27,7 @@ printLine;
 echo "help for roellsh: ${BLUE} rsh help${SET}"
 echo "help for plugin: ${BLUE}  rsh pluginName help${SET}"
 printLine;
+
+if [[ $showQuote == true ]]; then
+    node $_ROELLSH_DIR/core/scripts/daily-quote.js
+fi
