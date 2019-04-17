@@ -34,7 +34,7 @@ On Linux give the install file execution rights with (mby sudo)
 chmod +x install.sh
 ```
 
-than run
+then run
 ```
 ./install.sh
 ```
