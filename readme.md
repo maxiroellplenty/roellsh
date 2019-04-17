@@ -1,5 +1,5 @@
 # roellsh 'rsh'
-> make your dev life easier with rsh 100% Shell
+> make your dev life easier with rsh
 
 Roellsh is a bash script which carries some useful tools for your CLI,
 you can add your own plugins to add as many scripts as you want.
