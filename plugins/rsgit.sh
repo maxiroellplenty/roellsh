@@ -63,7 +63,7 @@ function savePull()
 {
     if [ -n "$(git status --porcelain)" ]; then
         saveStash;
-        git pull
+        git pull 
     else
         git pull
     fi
@@ -94,7 +94,7 @@ cat << "EOF"
     
     usage:
     
-    pull    tries to pull al your linked repositories to the latest version
+    pull    tries to pull all your linked repositories to the latest version
             if there are changes the command will stash them.
 
     repos   will list your linked repositories and show their branch    
