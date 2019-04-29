@@ -4,7 +4,7 @@ source $_ROELLSH_DIR/core/helper/helper-functions.sh
 _WORKSPACE_DIR="/workspace/";
 # Add your Git repositories
 declare -a repositories=();
-repositories=("terra" "terra-components")
+repositories=("terra" "terra-components" "pl" "py" "ps")
 
 #Pull Repos
 function pull()
@@ -63,9 +63,9 @@ function savePull()
 {
     if [ -n "$(git status --porcelain)" ]; then
         saveStash;
-        git pull 
+        git pull &> /dev/null 
     else
-        git pull
+        git pull &> /dev/null
     fi
 }
 
@@ -86,6 +86,10 @@ function sclear()
     echo "TODO";
 }
 
+function menu()
+{
+
+}
 
 function _help() 
 {
@@ -102,13 +106,14 @@ cat << "EOF"
     stash   is a git function to stash your changes with
             example: --stash yourStashName
     
-    sclear   will delete all created stashes from roellsh
+    sclear  will delete all created stashes from roellsh
 
 EOF
 }
 
 if [ -n "$1" ]; then
    case $1 in
+       "menu") menu;; 
        "pull") pull;;
        "stash") stash $2;;
        "repos") repos;;
@@ -117,5 +122,6 @@ if [ -n "$1" ]; then
        *) _help;;
    esac
 fi
+
 
 
