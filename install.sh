@@ -83,11 +83,10 @@ echo "${RED}"
 printHeader;
 echo "${SET}"
 areYouSure;
-
 if [ -n "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
    aliasPath=~/.zshrc;
 elif [ -n "`$SHELL -c 'echo $BASH_VERSION'`" ]; then
-    aliasPath;
+    checkBashDirs;
 else
    echo "${LIGHTRED}No bash or zsh shell detected to access alias file${SET}";
 fi
