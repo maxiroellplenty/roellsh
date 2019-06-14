@@ -16,7 +16,7 @@ function checkBashDirs
     bash_profile=~/.bashrc_profile
     if [ -f $bash ]; then
         aliasPath=$bash;
-    elif [ -f $bash_profile]; then
+    elif [ -f $bash_profile ]; then
         aliasPath=$bash_profile;
     else
         touch $bash;
